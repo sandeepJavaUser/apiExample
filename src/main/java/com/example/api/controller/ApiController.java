@@ -17,6 +17,7 @@ MongoTemplate mongotemplate;
 @RequestMapping(value="/postADetails",method=RequestMethod.POST)
 public ApiPojo fetchdetails(@RequestBody ApiPojo apiPojo)
 {
+	System.out.println("In Pojo");
 	mongotemplate.save(apiPojo);
 	return apiPojo;
 }
